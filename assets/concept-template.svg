@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560">
+  <defs>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="560" fill="#0d1117" rx="16"/>
+
+  <!-- Card -->
+  <rect x="100" y="30" width="600" height="500" fill="url(#cardGrad)" stroke="#30363d" stroke-width="1" rx="12"/>
+
+  <!-- Header -->
+  <rect x="100" y="30" width="600" height="50" fill="#161b22" rx="12"/>
+  <text x="400" y="62" font-family="ui-monospace,monospace" font-size="18" font-weight="bold" fill="#58a6ff" text-anchor="middle"># concept-template.md</text>
+  <line x1="100" y1="80" x2="700" y2="80" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Sections -->
+  <g font-family="ui-sans-serif,sans-serif" font-size="14" fill="#e6edf3">
+    <!-- 1 -->
+    <circle cx="140" cy="115" r="12" fill="#58a6ff"/>
+    <text x="140" y="120" font-size="11" font-weight="bold" fill="#0d1117" text-anchor="middle">1</text>
+    <text x="165" y="120" font-weight="bold">What is it?</text>
+    <text x="165" y="138" font-size="11" fill="#8b949e">Clear definition, not a Wikipedia copy</text>
+
+    <!-- 2 -->
+    <circle cx="140" cy="160" r="12" fill="#bc8cff"/>
+    <text x="140" y="165" font-size="11" font-weight="bold" fill="#0d1117" text-anchor="middle">2</text>
+    <text x="165" y="165" font-weight="bold">Why does it matter?</text>
+    <text x="165" y="183" font-size="11" fill="#8b949e">The real-world cost of not knowing</text>
+
+    <!-- 3 -->
+    <circle cx="140" cy="205" r="12" fill="#f778ba"/>
+    <text x="140" y="210" font-size="11" font-weight="bold" fill="#0d1117" text-anchor="middle">3</text>
+    <text x="165" y="210" font-weight="bold">Mental model</text>
+    <text x="165" y="228" font-size="11" fill="#8b949e">The intuition that makes it stick</text>
+
+    <!-- 4 -->
+    <circle cx="140" cy="250" r="12" fill="#ff7b72"/>
+    <text x="140" y="255" font-size="11" font-weight="bold" fill="#0d1117" text-anchor="middle">4</text>
+    <text x="165" y="255" font-weight="bold">How does it actually work?</text>
+    <text x="165" y="273" font-size="11" fill="#8b949e">The mechanism, no hand-waving</text>
+
+    <!-- 5 -->
+    <circle cx="140" cy="295" r="12" fill="#ffa657"/>
+    <text x="140" y="300" font-size="11" font-weight="bold" fill="#0d1117" text-anchor="middle">5</text>
+    <text x="165" y="300" font-weight="bold">Example</text>
+    <text x="165" y="318" font-size="11" fill="#8b949e">Concrete, runnable, not abstract</text>
+
+    <!-- 6 -->
+    <circle cx="140" cy="340" r="12" fill="#d29922"/>
+    <text x="140" y="345" font-size="11" font-weight="bold" fill="#0d1117" text-anchor="middle">6</text>
+    <text x="165" y="345" font-weight="bold">Common misconceptions</text>
+    <text x="165" y="363" font-size="11" fill="#8b949e">Where intuition leads astray</text>
+
+    <!-- 7 -->
+    <circle cx="140" cy="385" r="12" fill="#da3633"/>
+    <text x="140" y="390" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">7</text>
+    <text x="165" y="390" font-weight="bold">What AI tools hide</text>
+    <text x="165" y="408" font-size="11" fill="#da3633">★ The heart of Vibe Detox</text>
+
+    <!-- 8 -->
+    <circle cx="140" cy="430" r="12" fill="#7ee787"/>
+    <text x="140" y="435" font-size="11" font-weight="bold" fill="#0d1117" text-anchor="middle">8</text>
+    <text x="165" y="435" font-weight="bold">Practical implications</text>
+    <text x="165" y="453" font-size="11" fill="#8b949e">What changes in real systems</text>
+
+    <!-- 9-10 combined -->
+    <circle cx="140" cy="475" r="12" fill="#2ea043"/>
+    <text x="140" y="480" font-size="11" font-weight="bold" fill="#0d1117" text-anchor="middle">9</text>
+    <text x="165" y="480" font-weight="bold">Related topics + References</text>
+    <text x="165" y="498" font-size="11" fill="#8b949e">Connect and cite primary sources</text>
+  </g>
+</svg>

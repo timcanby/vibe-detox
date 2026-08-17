@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#58a6ff"/>
+      <stop offset="50%" stop-color="#bc8cff"/>
+      <stop offset="100%" stop-color="#f778ba"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" fill="#0d1117" rx="28"/>
+  <!-- detox symbol: leaf + code brackets -->
+  <path d="M 44 38 Q 64 30 84 38 Q 92 58 84 78 Q 64 86 44 78 Q 36 58 44 38 Z" fill="none" stroke="url(#logoGrad)" stroke-width="4"/>
+  <text x="55" y="70" font-family="ui-monospace,monospace" font-size="24" font-weight="bold" fill="url(#logoGrad)">&lt;</text>
+  <text x="68" y="70" font-family="ui-monospace,monospace" font-size="24" font-weight="bold" fill="url(#logoGrad)">&gt;</text>
+  <circle cx="64" cy="58" r="3" fill="url(#logoGrad)"/>
+</svg>
