@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="380" viewBox="0 0 800 380">
+  <rect width="800" height="380" fill="#0d1117" rx="16"/>
+  <text x="400" y="35" font-family="ui-sans-serif,sans-serif" font-size="20" font-weight="bold" fill="#58a6ff" text-anchor="middle">Terraform Workflow: init → plan → apply → destroy</text>
+
+  <!-- init -->
+  <rect x="30" y="70" width="160" height="110" fill="#161b22" stroke="#7ee787" stroke-width="2" rx="10"/>
+  <text x="110" y="95" font-family="ui-monospace,monospace" font-size="13" font-weight="bold" fill="#7ee787" text-anchor="middle">terraform init</text>
+  <text x="110" y="118" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">One-time setup</text>
+  <text x="45" y="140" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#e6edf3" text-anchor="start">• Download providers</text>
+  <text x="45" y="157" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#e6edf3" text-anchor="start">• Configure backend</text>
+  <text x="45" y="174" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#e6edf3" text-anchor="start">• Create lock file</text>
+
+  <!-- arrow -->
+  <line x1="195" y1="125" x2="225" y2="125" stroke="#30363d" stroke-width="2" marker-end="url(#wa)"/>
+  <defs><marker id="wa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#30363d"/></marker></defs>
+
+  <!-- plan -->
+  <rect x="230" y="70" width="160" height="110" fill="#161b22" stroke="#ffa657" stroke-width="2" rx="10"/>
+  <text x="310" y="95" font-family="ui-monospace,monospace" font-size="13" font-weight="bold" fill="#ffa657" text-anchor="middle">terraform plan</text>
+  <text x="310" y="118" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">Preview changes</text>
+  <text x="245" y="140" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#7ee787" text-anchor="start">+ to add</text>
+  <text x="245" y="157" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#ffa657" text-anchor="start">~ to change</text>
+  <text x="245" y="174" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#ff7b72" text-anchor="start">- to destroy</text>
+
+  <!-- arrow -->
+  <line x1="395" y1="125" x2="425" y2="125" stroke="#30363d" stroke-width="2" marker-end="url(#wa)"/>
+
+  <!-- apply -->
+  <rect x="430" y="70" width="160" height="110" fill="#161b22" stroke="#58a6ff" stroke-width="2" rx="10"/>
+  <text x="510" y="95" font-family="ui-monospace,monospace" font-size="13" font-weight="bold" fill="#58a6ff" text-anchor="middle">terraform apply</text>
+  <text x="510" y="118" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">Execute changes</text>
+  <text x="445" y="140" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#e6edf3" text-anchor="start">• API calls to AWS</text>
+  <text x="445" y="157" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#e6edf3" text-anchor="start">• Update state</text>
+  <text x="445" y="174" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#e6edf3" text-anchor="start">• Show outputs</text>
+
+  <!-- arrow -->
+  <line x1="595" y1="125" x2="625" y2="125" stroke="#30363d" stroke-width="2" marker-end="url(#wa)"/>
+
+  <!-- destroy -->
+  <rect x="630" y="70" width="140" height="110" fill="#161b22" stroke="#ff7b72" stroke-width="2" rx="10"/>
+  <text x="700" y="95" font-family="ui-monospace,monospace" font-size="12" font-weight="bold" fill="#ff7b72" text-anchor="middle">terraform destroy</text>
+  <text x="700" y="118" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">Tear down all</text>
+  <text x="645" y="140" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#ff7b72" text-anchor="start">• Remove everything</text>
+  <text x="645" y="157" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#ff7b72" text-anchor="start">• Permanent!</text>
+  <text x="645" y="174" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#8b949e" text-anchor="start">• Empty state</text>
+
+  <!-- Safety -->
+  <rect x="100" y="220" width="600" height="120" fill="#1c1e26" stroke="#bc8cff" stroke-width="1" rx="8"/>
+  <text x="400" y="245" font-family="ui-sans-serif,sans-serif" font-size="14" font-weight="bold" fill="#bc8cff" text-anchor="middle">Safety Rules</text>
+  <text x="120" y="270" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#7ee787" text-anchor="start">✓ Always plan before apply — review the diff</text>
+  <text x="120" y="290" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#7ee787" text-anchor="start">✓ Check terraform workspace show before any command</text>
+  <text x="120" y="310" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#7ee787" text-anchor="start">✓ Use -out=tfplan in CI/CD for reviewed plans</text>
+  <text x="120" y="330" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#ff7b72" text-anchor="start">✗ Never terraform destroy -auto-approve in production</text>
+</svg>
