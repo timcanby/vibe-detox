@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="380" viewBox="0 0 800 380">
+  <rect width="800" height="380" fill="#0d1117" rx="16"/>
+  <text x="400" y="35" font-family="ui-sans-serif,sans-serif" font-size="20" font-weight="bold" fill="#58a6ff" text-anchor="middle">Protected Routes — Frontend Gatekeeper</text>
+
+  <!-- Public -->
+  <rect x="50" y="70" width="280" height="120" fill="#161b22" stroke="#7ee787" stroke-width="2" rx="10"/>
+  <text x="190" y="95" font-family="ui-sans-serif,sans-serif" font-size="14" font-weight="bold" fill="#7ee787" text-anchor="middle">Public Route</text>
+  <text x="190" y="120" font-family="ui-monospace,monospace" font-size="12" fill="#e6edf3" text-anchor="middle">/ (landing page)</text>
+  <text x="65" y="148" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#8b949e">Anyone can access</text>
+  <text x="65" y="165" font-family="ui-monospace,monospace" font-size="10" fill="#7ee787"><SignedOut> → <SignInButton/></text>
+
+  <!-- Protected -->
+  <rect x="470" y="70" width="280" height="120" fill="#161b22" stroke="#ff7b72" stroke-width="2" rx="10"/>
+  <text x="610" y="95" font-family="ui-sans-serif,sans-serif" font-size="14" font-weight="bold" fill="#ff7b72" text-anchor="middle">Protected Route</text>
+  <text x="610" y="120" font-family="ui-monospace,monospace" font-size="12" fill="#e6edf3" text-anchor="middle">/product (app page)</text>
+  <text x="485" y="148" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#8b949e">Only signed-in users</text>
+  <text x="485" y="165" font-family="ui-monospace,monospace" font-size="10" fill="#ff7b72">if (!isSignedIn) → redirect to /</text>
+
+  <!-- Arrow between -->
+  <line x1="330" y1="130" x2="470" y2="130" stroke="#30363d" stroke-width="2" stroke-dasharray="4"/>
+  <text x="400" y="125" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">requires auth</text>
+
+  <!-- Flow -->
+  <rect x="100" y="220" width="600" height="130" fill="#1c1e26" stroke="#58a6ff" stroke-width="1" rx="8"/>
+  <text x="400" y="245" font-family="ui-sans-serif,sans-serif" font-size="14" font-weight="bold" fill="#58a6ff" text-anchor="middle">Auth Flow</text>
+  <text x="120" y="275" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#bc8cff">① User visits /product</text>
+  <text x="120" y="295" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#ffa657">② Clerk checks: isSignedIn?</text>
+  <text x="120" y="315" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#ff7b72">③ No → redirect to / (sign-in)</text>
+  <text x="120" y="335" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#7ee787">③ Yes → render /product page</text>
+
+  <text x="620" y="275" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#f778ba" text-anchor="middle">⚠ Frontend = UX</text>
+  <text x="620" y="295" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#f778ba" text-anchor="middle">Backend = Security</text>
+  <text x="620" y="320" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">Bouncer at the door</text>
+  <text x="620" y="335" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">≠ locked door</text>
+</svg>
