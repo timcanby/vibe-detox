@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+  <rect width="800" height="420" fill="#0d1117" rx="16"/>
+  <text x="400" y="35" font-family="ui-sans-serif,sans-serif" font-size="20" font-weight="bold" fill="#58a6ff" text-anchor="middle">Backend Auth Verification</text>
+  <rect x="280" y="60" width="240" height="45" fill="#161b22" stroke="#bc8cff" stroke-width="2" rx="8"/>
+  <text x="400" y="88" font-family="ui-monospace,monospace" font-size="13" fill="#bc8cff" text-anchor="middle">POST /api/generate + JWT</text>
+  <line x1="400" y1="108" x2="400" y2="128" stroke="#30363d" stroke-width="2" marker-end="url(#ba)"/>
+  <defs><marker id="ba" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#30363d"/></marker></defs>
+  <rect x="250" y="130" width="300" height="40" fill="#1c1e26" stroke="#ffa657" stroke-width="2" rx="6"/>
+  <text x="400" y="155" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#ffa657" text-anchor="middle">1. Extract JWT from header/cookie</text>
+  <line x1="400" y1="172" x2="400" y2="192" stroke="#30363d" stroke-width="2" marker-end="url(#ba)"/>
+  <rect x="250" y="194" width="300" height="40" fill="#1c1e26" stroke="#f778ba" stroke-width="2" rx="6"/>
+  <text x="400" y="219" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#f778ba" text-anchor="middle">2. Verify signature (cached JWKS)</text>
+  <line x1="400" y1="236" x2="400" y2="256" stroke="#30363d" stroke-width="2" marker-end="url(#ba)"/>
+  <rect x="250" y="258" width="300" height="40" fill="#1c1e26" stroke="#d29922" stroke-width="2" rx="6"/>
+  <text x="400" y="283" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#d29922" text-anchor="middle">3. Check claims: expired? issuer?</text>
+  <line x1="400" y1="300" x2="400" y2="322" stroke="#30363d" stroke-width="2" marker-end="url(#ba)"/>
+  <rect x="100" y="322" width="280" height="45" fill="#161b22" stroke="#7ee787" stroke-width="2" rx="8"/>
+  <text x="240" y="350" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#7ee787" text-anchor="middle">Valid - run route, inject user</text>
+  <rect x="440" y="322" width="280" height="4" fill="#161b22" stroke="#ff7b72" stroke-width="2" rx="8"/>
+  <text x="580" y="350" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#ff7b72" text-anchor="middle">Invalid - 401 Unauthorized</text>
+  <text x="400" y="395" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">Local validation via JWKS — no API call to Clerk per request</text>
+  <text x="400" y="412" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#ff7b72" text-anchor="middle">Frontend = UX. This = security.</text>
+</svg>
