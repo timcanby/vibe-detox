@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <rect width="800" height="400" fill="#0d1117" rx="16"/>
+  <text x="400" y="35" font-family="ui-sans-serif,sans-serif" font-size="20" font-weight="bold" fill="#58a6ff" text-anchor="middle">Remote State Backend for CI/CD</text>
+
+  <!-- Local state -->
+  <rect x="30" y="65" width="280" height="120" fill="#161b22" stroke="#ff7b72" stroke-width="2" rx="10"/>
+  <text x="170" y="90" font-family="ui-sans-serif,sans-serif" font-size="14" font-weight="bold" fill="#ff7b72" text-anchor="middle">Local State (laptop)</text>
+  <text x="170" y="115" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">terraform.tfstate</text>
+  <text x="170" y="135" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#ff7b72" text-anchor="middle">Lost when VM shuts down</text>
+  <text x="170" y="155" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#ff7b72" text-anchor="middle">No sharing across runs</text>
+  <text x="170" y="175" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#ff7b72" text-anchor="middle">No locking</text>
+
+  <!-- Remote state -->
+  <rect x="490" y="65" width="280" height="120" fill="#161b22" stroke="#7ee787" stroke-width="2" rx="10"/>
+  <text x="630" y="90" font-family="ui-sans-serif,sans-serif" font-size="14" font-weight="bold" fill="#7ee787" text-anchor="middle">Remote State (S3 + DynamoDB)</text>
+  <text x="630" y="115" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">Shared across all CI/CD runs</text>
+  <text x="630" y="135" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#7ee787" text-anchor="middle">Persists between workflow runs</text>
+  <text x="630" y="155" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#7ee787" text-anchor="middle">DynamoDB locking</text>
+  <text x="630" y="175" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#7ee787" text-anchor="middle">S3 versioning for rollback</text>
+
+  <!-- GitHub Actions runs -->
+  <rect x="50" y="215" width="120" height="50" fill="#161b22" stroke="#bc8cff" rx="6"/>
+  <text x="110" y="245" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#bc8cff" text-anchor="middle">Run #1 (push)</text>
+
+  <rect x="50" y="280" width="120" height="50" fill="#161b22" stroke="#f778ba" rx="6"/>
+  <text x="110" y="310" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#f778ba" text-anchor="middle">Run #2 (push)</text>
+
+  <!-- S3 bucket -->
+  <rect x="450" y="230" width="160" height="80" fill="#1c1e26" stroke="#ffa657" stroke-width="2" rx="8"/>
+  <text x="530" y="255" font-family="ui-sans-serif,sans-serif" font-size="13" font-weight="bold" fill="#ffa657" text-anchor="middle">S3 Bucket</text>
+  <text x="530" y="275" font-family="ui-monospace,monospace" font-size="10" fill="#8b949e" text-anchor="middle">twin-terraform-state</text>
+  <text x="530" y="295" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#7ee787" text-anchor="middle">versioned + encrypted</text>
+
+  <!-- DynamoDB -->
+  <rect x="630" y="230" width="140" height="80" fill="#1c1e26" stroke="#d29922" stroke-width="2" rx="8"/>
+  <text x="700" y="255" font-family="ui-sans-serif,sans-serif" font-size="13" font-weight="bold" fill="#d29922" text-anchor="middle">DynamoDB</text>
+  <text x="700" y="275" font-family="ui-monospace,monospace" font-size="10" fill="#8b949e" text-anchor="middle">terraform-locks</text>
+  <text x="700" y="295" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#7ee787" text-anchor="middle">prevents concurrent writes</text>
+
+  <!-- Arrows -->
+  <defs><marker id="ba2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#30363d"/></marker></defs>
+  <line x1="170" y1="240" x2="450" y2="260" stroke="#bc8cff" stroke-width="1.5" marker-end="url(#ba2)"/>
+  <line x1="170" y1="305" x2="450" y2="280" stroke="#f778ba" stroke-width="1.5" marker-end="url(#ba2)"/>
+
+  <!-- Bottom -->
+  <text x="400" y="370" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#8b949e" text-anchor="middle">Each GitHub Actions run is a fresh VM — state must live in shared storage</text>
+  <text x="400" y="390" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#58a6ff" text-anchor="middle" font-style="italic">Bootstrap: create S3+DynamoDB locally first, then configure as backend</text>
+</svg>
