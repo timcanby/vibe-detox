@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+  <rect width="800" height="420" fill="#0d1117" rx="16"/>
+  <text x="400" y="35" font-family="ui-sans-serif,sans-serif" font-size="20" font-weight="bold" fill="#58a6ff" text-anchor="middle">Next.js = React + Everything You Need</text>
+
+  <!-- React core -->
+  <rect x="300" y="60" width="200" height="50" fill="#1c1e26" stroke="#58a6ff" stroke-width="2" rx="8"/>
+  <text x="400" y="92" font-family="ui-monospace,monospace" font-size="14" fill="#58a6ff" text-anchor="middle">React (UI library)</text>
+
+  <!-- Next.js wraps around -->
+  <rect x="50" y="120" width="700" height="260" fill="#161b22" stroke="#7ee787" stroke-width="2" rx="12"/>
+  <text x="400" y="150" font-family="ui-sans-serif,sans-serif" font-size="16" font-weight="bold" fill="#7ee787" text-anchor="middle">Next.js (meta-framework)</text>
+
+  <!-- Feature boxes -->
+  <g font-family="ui-sans-serif,sans-serif" font-size="13" text-anchor="middle">
+    <rect x="80" y="170" width="140" height="55" fill="#0d1117" stroke="#bc8cff" rx="6"/>
+    <text x="150" y="194" fill="#bc8cff" font-weight="bold">File-based</text>
+    <text x="150" y="212" fill="#8b949e">Routing</text>
+
+    <rect x="240" y="170" width="140" height="55" fill="#0d1117" stroke="#f778ba" rx="6"/>
+    <text x="310" y="194" fill="#f778ba" font-weight="bold">SSR / SSG</text>
+    <text x="310" y="212" fill="#8b949e">Rendering</text>
+
+    <rect x="400" y="170" width="140" height="55" fill="#0d1117" stroke="#ffa657" rx="6"/>
+    <text x="470" y="194" fill="#ffa657" font-weight="bold">API Routes</text>
+    <text x="470" y="212" fill="#8b949e">Backend in one</text>
+
+    <rect x="560" y="170" width="160" height="55" fill="#0d1117" stroke="#7ee787" rx="6"/>
+    <text x="640" y="194" fill="#7ee787" font-weight="bold">Code Splitting</text>
+    <text x="640" y="212" fill="#8b949e">Auto per-route</text>
+  </g>
+
+  <g font-family="ui-sans-serif,sans-serif" font-size="13" text-anchor="middle">
+    <rect x="80" y="245" width="140" height="55" fill="#0d1117" stroke="#d29922" rx="6"/>
+    <text x="150" y="269" fill="#d29922" font-weight="bold">Transpiling</text>
+    <text x="150" y="287" fill="#8b949e">TS → JS (SWC)</text>
+
+    <rect x="240" y="245" width="140" height="55" fill="#0d1117" stroke="#ff7b72" rx="6"/>
+    <text x="310" y="269" fill="#ff7b72" font-weight="bold">Bundling</text>
+    <text x="310" y="287" fill="#8b949e">Turbopack</text>
+
+    <rect x="400" y="245" width="140" height="55" fill="#0d1117" stroke="#58a6ff" rx="6"/>
+    <text x="470" y="269" fill="#58a6ff" font-weight="bold">Image Opt</text>
+    <text x="470" y="287" fill="#8b949e">Responsive</text>
+
+    <rect x="560" y="245" width="160" height="55" fill="#0d1117" stroke="#bc8cff" rx="6"/>
+    <text x="640" y="269" fill="#bc8cff" font-weight="bold">Fast Refresh</text>
+    <text x="640" y="287" fill="#8b949e">Dev DX</text>
+  </g>
+
+  <text x="400" y="340" font-family="ui-sans-serif,sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">Convention over configuration — files become routes, no manual wiring</text>
+  <text x="400" y="365" font-family="ui-sans-serif,sans-serif" font-size="14" fill="#58a6ff" text-anchor="middle" font-style="italic">"Rails for React" — hit the ground running</text>
+</svg>

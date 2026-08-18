@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+  <rect width="800" height="420" fill="#0d1117" rx="16"/>
+  <text x="400" y="35" font-family="ui-sans-serif,sans-serif" font-size="20" font-weight="bold" fill="#58a6ff" text-anchor="middle">Python Backend Frameworks</text>
+
+  <!-- Django -->
+  <rect x="30" y="65" width="230" height="310" fill="#161b22" stroke="#7ee787" stroke-width="2" rx="10"/>
+  <text x="145" y="95" font-family="ui-sans-serif,sans-serif" font-size="18" font-weight="bold" fill="#7ee787" text-anchor="middle">Django</text>
+  <text x="145" y="118" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#8b949e" text-anchor="middle">"Batteries included"</text>
+  <text x="45" y="150" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#e6edf3">✓ ORM (built-in)</text>
+  <text x="45" y="170" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#e6edf3">✓ Auth system</text>
+  <text x="45" y="190" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#e6edf3">✓ Admin panel</text>
+  <text x="45" y="210" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#e6edf3">✓ Templates</text>
+  <text x="45" y="230" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#e6edf3">✓ Migrations</text>
+  <text x="45" y="250" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#e6edf3">✓ CSRF, sessions</text>
+  <text x="45" y="280" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#ff7b72">✗ Heavy / opinionated</text>
+  <text x="45" y="300" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#ff7b72">✗ Synchronous only</text>
+  <text x="45" y="320" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#ff7b72">✗ Not for pure APIs</text>
+  <text x="145" y="355" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#bc8cff" text-anchor="middle" font-style="italic">Full kitchen</text>
+
+  <!-- Flask -->
+  <rect x="285" y="65" width="230" height="310" fill="#161b22" stroke="#ffa657" stroke-width="2" rx="10"/>
+  <text x="400" y="95" font-family="ui-sans-serif,sans-serif" font-size="18" font-weight="bold" fill="#ffa657" text-anchor="middle">Flask</text>
+  <text x="400" y="118" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#8b949e" text-anchor="middle">"Micro framework"</text>
+  <text x="300" y="150" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#e6edf3">✓ Routing</text>
+  <text x="300" y="170" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#e6edf3">✓ Request/response</text>
+  <text x="300" y="190" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#e6edf3">✓ Super simple start</text>
+  <text x="300" y="210" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#e6edf3">✓ Flexible</text>
+  <text x="300" y="240" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#ff7b72">✗ No ORM (add SQLAlchemy)</text>
+  <text x="300" y="260" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#ff7b72">✗ No auth (add Flask-Login)</text>
+  <text x="300" y="280" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#ff7b72">✗ No admin</text>
+  <text x="300" y="300" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#ff7b72">✗ Pick & choose everything</text>
+  <text x="300" y="320" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#ff7b72">✗ Synchronous</text>
+  <text x="400" y="355" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#bc8cff" text-anchor="middle" font-style="italic">Empty kitchen</text>
+
+  <!-- FastAPI -->
+  <rect x="540" y="65" width="230" height="310" fill="#161b22" stroke="#58a6ff" stroke-width="2" rx="10"/>
+  <text x="655" y="95" font-family="ui-sans-serif,sans-serif" font-size="18" font-weight="bold" fill="#58a6ff" text-anchor="middle">FastAPI</text>
+  <text x="655" y="118" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#8b949e" text-anchor="middle">"Modern, async, typed"</text>
+  <text x="555" y="150" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#e6edf3">✓ Async (high concurrency)</text>
+  <text x="555" y="170" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#e6edf3">✓ Pydantic validation</text>
+  <text x="555" y="190" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#e6edf3">✓ Auto OpenAPI docs</text>
+  <text x="555" y="210" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#e6edf3">✓ Type hints = validation</text>
+  <text x="555" y="230" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#e6edf3">✓ Dependency injection</text>
+  <text x="555" y="250" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#e6edf3">✓ Fast (Starlette ASGI)</text>
+  <text x="555" y="280" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#ff7b72">✗ No admin panel</text>
+  <text x="555" y="300" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#ff7b72">✗ No built-in ORM</text>
+  <text x="555" y="320" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#ff7b72">✗ Newer (less tutorials)</text>
+  <text x="655" y="355" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#bc8cff" text-anchor="middle" font-style="italic">Smart kitchen</text>
+</svg>

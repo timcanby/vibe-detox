@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0d1117" rx="16"/>
+  <text x="400" y="35" font-family="ui-sans-serif,sans-serif" font-size="20" font-weight="bold" fill="#58a6ff" text-anchor="middle">Declarative vs Imperative UI</text>
+
+  <!-- Imperative side -->
+  <text x="200" y="75" font-family="ui-sans-serif,sans-serif" font-size="16" font-weight="bold" fill="#ff7b72" text-anchor="middle">Imperative (old way)</text>
+  <rect x="50" y="90" width="300" height="130" fill="#161b22" stroke="#ff7b72" stroke-width="1" rx="8"/>
+  <text x="65" y="115" font-family="ui-monospace,monospace" font-size="11" fill="#e6edf3">// Step 1: find element</text>
+  <text x="65" y="133" font-family="ui-monospace,monospace" font-size="11" fill="#e6edf3">const el = document</text>
+  <text x="65" y="148" font-family="ui-monospace,monospace" font-size="11" fill="#e6edf3">  .getElementById("btn");</text>
+  <text x="65" y="170" font-family="ui-monospace,monospace" font-size="11" fill="#e6edf3">// Step 2: mutate it</text>
+  <text x="65" y="188" font-family="ui-monospace,monospace" font-size="11" fill="#e6edf3">el.textContent = newText;</text>
+  <text x="65" y="206" font-family="ui-monospace,monospace" font-size="11" fill="#e6edf3">el.className = "active";</text>
+  <text x="200" y="245" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">You tell the browser HOW</text>
+  <text x="200" y="262" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#ff7b72" text-anchor="middle">❌ state drift, race conditions</text>
+
+  <!-- Declarative side -->
+  <text x="600" y="75" font-family="ui-sans-serif,sans-serif" font-size="16" font-weight="bold" fill="#7ee787" text-anchor="middle">Declarative (React)</text>
+  <rect x="450" y="90" width="300" height="130" fill="#161b22" stroke="#7ee787" stroke-width="1" rx="8"/>
+  <text x="465" y="115" font-family="ui-monospace,monospace" font-size="11" fill="#e6edf3">// Describe WHAT it looks</text>
+  <text x="465" y="133" font-family="ui-monospace,monospace" font-size="11" fill="#e6edf3">// like for this state</text>
+  <text x="465" y="155" font-family="ui-monospace,monospace" font-size="11" fill="#7ee787">function Button({active}) {</text>
+  <text x="465" y="170" font-family="ui-monospace,monospace" font-size="11" fill="#e6edf3">  return <button</text>
+  <text x="465" y="185" font-family="ui-monospace,monospace" font-size="11" fill="#e6edf3">    className={active?</text>
+  <text x="465" y="200" font-family="ui-monospace,monospace" font-size="11" fill="#e6edf3">    "active":""}>...</button></text>
+  <text x="465" y="215" font-family="ui-monospace,monospace" font-size="11" fill="#7ee787">}</text>
+  <text x="600" y="245" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">You describe WHAT</text>
+  <text x="600" y="262" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#7ee787" text-anchor="middle">✅ UI = f(state), always correct</text>
+
+  <!-- Formula -->
+  <rect x="250" y="300" width="300" height="60" fill="#1c1e26" stroke="#bc8cff" stroke-width="2" rx="10"/>
+  <text x="400" y="340" font-family="ui-sans-serif,sans-serif" font-size="20" font-weight="bold" fill="#bc8cff" text-anchor="middle">UI = f(state)</text>
+
+  <text x="400" y="395" font-family="ui-sans-serif,sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">React: "given state S, here's the UI" → framework diffs & patches DOM</text>
+  <text x="400" y="420" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#58a6ff" text-anchor="middle" font-style="italic">Like a spreadsheet formula — you don't redraw cells manually</text>
+</svg>

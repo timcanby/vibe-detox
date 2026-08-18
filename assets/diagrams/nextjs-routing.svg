@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#0d1117" rx="16"/>
+  <text x="400" y="35" font-family="ui-sans-serif,sans-serif" font-size="20" font-weight="bold" fill="#58a6ff" text-anchor="middle">Pages Router vs App Router</text>
+
+  <!-- Pages Router -->
+  <text x="200" y="70" font-family="ui-sans-serif,sans-serif" font-size="16" font-weight="bold" fill="#ff7b72" text-anchor="middle">Pages Router (legacy, simpler)</text>
+  <rect x="50" y="85" width="300" height="280" fill="#161b22" stroke="#ff7b72" stroke-width="2" rx="10"/>
+
+  <text x="65" y="110" font-family="ui-monospace,monospace" font-size="12" fill="#8b949e">pages/</text>
+  <text x="75" y="130" font-family="ui-monospace,monospace" font-size="12" fill="#e6edf3">├── index.tsx   → /</text>
+  <text x="75" y="150" font-family="ui-monospace,monospace" font-size="12" fill="#e6edf3">├── about.tsx   → /about</text>
+  <text x="75" y="170" font-family="ui-monospace,monospace" font-size="12" fill="#e6edf3">├── products/</text>
+  <text x="85" y="190" font-family="ui-monospace,monospace" font-size="12" fill="#e6edf3">│   ├── index.tsx → /products</text>
+  <text x="85" y="210" font-family="ui-monospace,monospace" font-size="12" fill="#e6edf3">│   └── [id].tsx  → /products/:id</text>
+  <text x="75" y="230" font-family="ui-monospace,monospace" font-size="12" fill="#e6edf3">└── _app.tsx    (wrapper)</text>
+
+  <line x1="65" y1="250" x2="335" y2="250" stroke="#30363d"/>
+  <text x="200" y="275" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#7ee787" text-anchor="middle">✓ Simple, flat</text>
+  <text x="200" y="293" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#7ee787" text-anchor="middle">✓ Battle-tested</text>
+  <text x="200" y="311" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#ff7b72" text-anchor="middle">✗ Manual layouts</text>
+  <text x="200" y="329" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#ff7b72" text-anchor="middle">✗ No server components</text>
+  <text x="200" y="350" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">Client-side fetching (useEffect)</text>
+
+  <!-- App Router -->
+  <text x="600" y="70" font-family="ui-sans-serif,sans-serif" font-size="16" font-weight="bold" fill="#7ee787" text-anchor="middle">App Router (new, recommended)</text>
+  <rect x="450" y="85" width="300" height="280" fill="#161b22" stroke="#7ee787" stroke-width="2" rx="10"/>
+
+  <text x="465" y="110" font-family="ui-monospace,monospace" font-size="12" fill="#8b949e">app/</text>
+  <text x="475" y="130" font-family="ui-monospace,monospace" font-size="12" fill="#e6edf3">├── layout.tsx  (root layout)</text>
+  <text x="475" y="150" font-family="ui-monospace,monospace" font-size="12" fill="#e6edf3">├── page.tsx    → /</text>
+  <text x="475" y="170" font-family="ui-monospace,monospace" font-size="12" fill="#e6edf3">├── about/</text>
+  <text x="485" y="190" font-family="ui-monospace,monospace" font-size="12" fill="#e6edf3">│   └── page.tsx → /about</text>
+  <text x="475" y="210" font-family="ui-monospace,monospace" font-size="12" fill="#e6edf3">├── products/</text>
+  <text x="485" y="230" font-family="ui-monospace,monospace" font-size="12" fill="#e6edf3">│   ├── layout.tsx (nested!)</text>
+  <text x="485" y="250" font-family="ui-monospace,monospace" font-size="12" fill="#e6edf3">│   └── [id]/page.tsx</text>
+
+  <line x1="465" y1="270" x2="735" y2="270" stroke="#30363d"/>
+  <text x="600" y="295" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#7ee787" text-anchor="middle">✓ Nested layouts auto-wrap</text>
+  <text x="600" y="313" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#7ee787" text-anchor="middle">✓ Server components</text>
+  <text x="600" y="331" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#7ee787" text-anchor="middle">✓ Streaming, better perf</text>
+  <text x="600" y="349" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#ff7b72" text-anchor="middle">✗ Steeper learning curve</text>
+
+  <!-- Bottom comparison -->
+  <rect x="200" y="390" width="400" height="45" fill="#1c1e26" stroke="#bc8cff" stroke-width="2" rx="8"/>
+  <text x="400" y="418" font-family="ui-sans-serif,sans-serif" font-size="14" fill="#bc8cff" text-anchor="middle">New project? → App Router. Legacy? → stay on Pages.</text>
+</svg>

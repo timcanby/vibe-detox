@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="380" viewBox="0 0 800 380">
+  <rect width="800" height="380" fill="#0d1117" rx="16"/>
+  <text x="400" y="35" font-family="ui-sans-serif,sans-serif" font-size="20" font-weight="bold" fill="#58a6ff" text-anchor="middle">JSX is Syntactic Sugar for createElement()</text>
+
+  <!-- Left: JSX -->
+  <text x="200" y="70" font-family="ui-sans-serif,sans-serif" font-size="16" font-weight="bold" fill="#bc8cff" text-anchor="middle">What you write (JSX/TSX)</text>
+  <rect x="50" y="85" width="300" height="110" fill="#161b22" stroke="#bc8cff" stroke-width="2" rx="8"/>
+  <text x="65" y="115" font-family="ui-monospace,monospace" font-size="13" fill="#e6edf3"><h1 className="title"</text>
+  <text x="75" y="133" font-family="ui-monospace,monospace" font-size="13" fill="#e6edf3">  onClick={handleClick}></text>
+  <text x="75" y="151" font-family="ui-monospace,monospace" font-size="13" fill="#e6edf3">  Hello {name}</text>
+  <text x="65" y="169" font-family="ui-monospace,monospace" font-size="13" fill="#e6edf3"></h1></text>
+
+  <!-- Arrow -->
+  <text x="400" y="145" font-family="ui-sans-serif,sans-serif" font-size="28" fill="#7ee787" text-anchor="middle">→</text>
+  <text x="400" y="175" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">transpile</text>
+
+  <!-- Right: createElement -->
+  <text x="600" y="70" font-family="ui-sans-serif,sans-serif" font-size="16" font-weight="bold" fill="#7ee787" text-anchor="middle">What it becomes (JS)</text>
+  <rect x="450" y="85" width="300" height="110" fill="#161b22" stroke="#7ee787" stroke-width="2" rx="8"/>
+  <text x="465" y="115" font-family="ui-monospace,monospace" font-size="13" fill="#e6edf3">createElement(</text>
+  <text x="475" y="133" font-family="ui-monospace,monospace" font-size="13" fill="#e6edf3">  "h1",</text>
+  <text x="475" y="151" font-family="ui-monospace,monospace" font-size="13" fill="#e6edf3">  {className: "title",</text>
+  <text x="485" y="169" font-family="ui-monospace,monospace" font-size="13" fill="#e6edf3">   onClick: handleClick},</text>
+
+  <!-- Result object -->
+  <text x="400" y="230" font-family="ui-sans-serif,sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">Both compile to a plain JS object:</text>
+  <rect x="250" y="245" width="300" height="100" fill="#1c1e26" stroke="#f778ba" stroke-width="2" rx="8"/>
+  <text x="265" y="270" font-family="ui-monospace,monospace" font-size="12" fill="#f778ba">{</text>
+  <text x="275" y="288" font-family="ui-monospace,monospace" font-size="12" fill="#e6edf3">  type: "h1",</text>
+  <text x="275" y="306" font-family="ui-monospace,monospace" font-size="12" fill="#e6edf3">  props: { className: "title",</text>
+  <text x="285" y="324" font-family="ui-monospace,monospace" font-size="12" fill="#e6edf3">    onClick: handleClick },</text>
+  <text x="275" y="342" font-family="ui-monospace,monospace" font-size="12" fill="#e6edf3">  children: ["Hello ", name]</text>
+  <text x="265" y="355" font-family="ui-monospace,monospace" font-size="12" fill="#f778ba">}</text>
+</svg>

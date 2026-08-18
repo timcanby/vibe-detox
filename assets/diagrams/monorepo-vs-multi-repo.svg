@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <rect width="800" height="400" fill="#0d1117" rx="16"/>
+  <text x="400" y="35" font-family="ui-sans-serif,sans-serif" font-size="20" font-weight="bold" fill="#58a6ff" text-anchor="middle">Monorepo vs Multi-Repo</text>
+
+  <!-- Monorepo -->
+  <text x="200" y="70" font-family="ui-sans-serif,sans-serif" font-size="16" font-weight="bold" fill="#7ee787" text-anchor="middle">Monorepo</text>
+  <rect x="50" y="85" width="300" height="230" fill="#161b22" stroke="#7ee787" stroke-width="2" rx="10"/>
+  <text x="200" y="110" font-family="ui-monospace,monospace" font-size="12" fill="#8b949e" text-anchor="middle">my-monorepo/</text>
+  <text x="70" y="135" font-family="ui-monospace,monospace" font-size="11" fill="#e6edf3">├── apps/</text>
+  <text x="80" y="153" font-family="ui-monospace,monospace" font-size="11" fill="#58a6ff">│   ├── web/   (Next.js)</text>
+  <text x="80" y="171" font-family="ui-monospace,monospace" font-size="11" fill="#58a6ff">│   ├── api/   (FastAPI)</text>
+  <text x="80" y="189" font-family="ui-monospace,monospace" font-size="11" fill="#58a6ff">│   └── worker/ (jobs)</text>
+  <text x="70" y="207" font-family="ui-monospace,monospace" font-size="11" fill="#e6edf3">├── packages/</text>
+  <text x="80" y="225" font-family="ui-monospace,monospace" font-size="11" fill="#bc8cff">│   ├── ui/   (shared)</text>
+  <text x="80" y="243" font-family="ui-monospace,monospace" font-size="11" fill="#bc8cff">│   └── types/ (shared)</text>
+  <text x="70" y="261" font-family="ui-monospace,monospace" font-size="11" fill="#e6edf3">└── turbo.json</text>
+
+  <text x="200" y="290" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#7ee787" text-anchor="middle">✓ Trivial code sharing</text>
+  <text x="200" y="307" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#ff7b72" text-anchor="middle">✗ Everything in one clone</text>
+
+  <!-- Multi-repo -->
+  <text x="600" y="70" font-family="ui-sans-serif,sans-serif" font-size="16" font-weight="bold" fill="#ffa657" text-anchor="middle">Multi-Repo</text>
+  <rect x="450" y="85" width="300" height="230" fill="#161b22" stroke="#ffa657" stroke-width="2" rx="10"/>
+
+  <rect x="475" y="105" width="250" height="50" fill="#0d1117" stroke="#58a6ff" rx="6"/>
+  <text x="600" y="125" font-family="ui-monospace,monospace" font-size="11" fill="#58a6ff" text-anchor="middle">github.com/my-org/web-app</text>
+  <text x="600" y="142" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">→ Vercel deploy</text>
+
+  <rect x="475" y="165" width="250" height="50" fill="#0d1117" stroke="#7ee787" rx="6"/>
+  <text x="600" y="185" font-family="ui-monospace,monospace" font-size="11" fill="#7ee787" text-anchor="middle">github.com/my-org/api-server</text>
+  <text x="600" y="202" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">→ Fly.io deploy</text>
+
+  <rect x="475" y="225" width="250" height="50" fill="#0d1117" stroke="#bc8cff" rx="6"/>
+  <text x="600" y="245" font-family="ui-monospace,monospace" font-size="11" fill="#bc8cff" text-anchor="middle">github.com/my-org/shared-types</text>
+  <text x="600" y="262" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">→ npm publish @my-org/types</text>
+
+  <text x="600" y="290" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#7ee787" text-anchor="middle">✓ Independent deploys</text>
+  <text x="600" y="307" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#ff7b72" text-anchor="middle">✗ Version management overhead</text>
+
+  <!-- Bottom -->
+  <text x="400" y="355" font-family="ui-sans-serif,sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">Monorepo = one house (easy sharing) · Multi-repo = apartment building (clear boundaries)</text>
+  <text x="400" y="380" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#58a6ff" text-anchor="middle" font-style="italic">Course uses multi-repo: one repo per week = one deploy target</text>
+</svg>

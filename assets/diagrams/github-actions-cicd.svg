@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+  <rect width="800" height="420" fill="#0d1117" rx="16"/>
+  <text x="400" y="35" font-family="ui-sans-serif,sans-serif" font-size="20" font-weight="bold" fill="#58a6ff" text-anchor="middle">GitHub Actions: CI/CD Pipeline</text>
+
+  <!-- Trigger -->
+  <rect x="300" y="60" width="200" height="45" fill="#161b22" stroke="#bc8cff" stroke-width="2" rx="8"/>
+  <text x="400" y="88" font-family="ui-monospace,monospace" font-size="14" fill="#bc8cff" text-anchor="middle">git push → main</text>
+
+  <line x1="400" y1="108" x2="400" y2="128" stroke="#30363d" stroke-width="2" marker-end="url(#ga)"/>
+  <defs><marker id="ga" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#30363d"/></marker></defs>
+
+  <!-- Build -->
+  <rect x="250" y="130" width="300" height="45" fill="#161b22" stroke="#ffa657" stroke-width="2" rx="8"/>
+  <text x="400" y="158" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#ffa657" text-anchor="middle">① Build: install deps, compile, bundle</text>
+
+  <line x1="400" y1="178" x2="400" y2="198" stroke="#30363d" stroke-width="2" marker-end="url(#ga)"/>
+
+  <!-- Test -->
+  <rect x="250" y="200" width="300" height="45" fill="#161b22" stroke="#7ee787" stroke-width="2" rx="8"/>
+  <text x="400" y="228" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#7ee787" text-anchor="middle">② Test: pytest, lint, type-check</text>
+
+  <line x1="400" y1="248" x2="400" y2="268" stroke="#30363d" stroke-width="2" marker-end="url(#ga)"/>
+
+  <!-- Package -->
+  <rect x="250" y="270" width="300" height="45" fill="#161b22" stroke="#f778ba" stroke-width="2" rx="8"/>
+  <text x="400" y="298" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#f778ba" text-anchor="middle">③ Package: Docker build, bundle</text>
+
+  <line x1="400" y1="318" x2="400" y2="338" stroke="#30363d" stroke-width="2" marker-end="url(#ga)"/>
+
+  <!-- Deploy -->
+  <rect x="250" y="340" width="300" height="45" fill="#161b22" stroke="#58a6ff" stroke-width="2" rx="8"/>
+  <text x="400" y="368" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#58a6ff" text-anchor="middle">④ Deploy: push to production</text>
+
+  <!-- Fail path -->
+  <rect x="580" y="200" width="180" height="45" fill="#161b22" stroke="#ff7b72" stroke-width="2" rx="8"/>
+  <text x="670" y="228" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#ff7b72" text-anchor="middle">❌ Fail → STOP</text>
+  <text x="670" y="245" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">production protected</text>
+  <line x1="550" y1="222" x2="580" y2="222" stroke="#ff7b72" stroke-width="2" stroke-dasharray="4" marker-end="url(#ga)"/>
+
+  <!-- Side note -->
+  <text x="120" y="200" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#8b949e" text-anchor="middle">If any step</text>
+  <text x="120" y="218" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#ff7b72" text-anchor="middle">fails →</text>
+  <text x="120" y="238" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#ff7b72" text-anchor="middle">belt stops</text>
+  <text x="120" y="258" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#8b949e" text-anchor="middle">nothing ships</text>
+
+  <text x="400" y="408" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#bc8cff" text-anchor="middle" font-style="italic">Factory assembly line triggered by every commit</text>
+</svg>

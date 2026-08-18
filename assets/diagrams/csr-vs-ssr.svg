@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <rect width="800" height="480" fill="#0d1117" rx="16"/>
+  <text x="400" y="35" font-family="ui-sans-serif,sans-serif" font-size="20" font-weight="bold" fill="#58a6ff" text-anchor="middle">Client-Side vs Server-Side Rendering</text>
+
+  <!-- CSR -->
+  <text x="200" y="65" font-family="ui-sans-serif,sans-serif" font-size="16" font-weight="bold" fill="#ff7b72" text-anchor="middle">CSR (Client-Side)</text>
+  <rect x="50" y="80" width="300" height="300" fill="#161b22" stroke="#ff7b72" stroke-width="2" rx="10"/>
+
+  <text x="65" y="105" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#8b949e">① Browser requests /products</text>
+  <text x="65" y="125" font-family="ui-monospace,monospace" font-size="11" fill="#e6edf3">   Server sends: <div id="root"></div></text>
+  <text x="65" y="143" font-family="ui-monospace,monospace" font-size="11" fill="#e6edf3">              + <script bundle.js></text>
+
+  <text x="65" y="170" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#ffa657">② Browser downloads 500KB JS</text>
+  <text x="65" y="185" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#ff7b72">   ⏳ User sees: BLANK PAGE</text>
+
+  <text x="65" y="210" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#8b949e">③ Browser executes JS</text>
+  <text x="65" y="225" font-family="ui-monospace,monospace" font-size="11" fill="#e6edf3">   React renders → DOM updates</text>
+
+  <text x="65" y="250" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#8b949e">④ Fetch data from API</text>
+  <text x="65" y="265" font-family="ui-monospace,monospace" font-size="11" fill="#e6edf3">   useEffect → fetch → render</text>
+
+  <text x="65" y="295" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#ff7b72" text-anchor="start">⏱ Content visible: ~3-5s</text>
+  <text x="65" y="315" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#ff7b72">❌ Poor SEO (empty HTML)</text>
+  <text x="65" y="335" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#7ee787">✅ Cheap (static CDN deploy)</text>
+  <text x="65" y="355" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#7ee787">✅ Simple (no server needed)</text>
+
+  <!-- SSR -->
+  <text x="600" y="65" font-family="ui-sans-serif,sans-serif" font-size="16" font-weight="bold" fill="#7ee787" text-anchor="middle">SSR (Server-Side)</text>
+  <rect x="450" y="80" width="300" height="300" fill="#161b22" stroke="#7ee787" stroke-width="2" rx="10"/>
+
+  <text x="465" y="105" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#8b949e">① Browser requests /products</text>
+  <text x="465" y="125" font-family="ui-monospace,monospace" font-size="11" fill="#e6edf3">   Server runs React components</text>
+  <text x="465" y="143" font-family="ui-monospace,monospace" font-size="11" fill="#e6edf3">   Fetches data on server</text>
+
+  <text x="465" y="170" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#8b949e">② Server generates full HTML</text>
+  <text x="465" y="185" font-family="ui-monospace,monospace" font-size="11" fill="#e6edf3">   <div>...full product list...</div></text>
+  <text x="465" y="203" font-family="ui-monospace,monospace" font-size="11" fill="#e6edf3">   + <script bundle.js></text>
+
+  <text x="465" y="230" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#7ee787">✅ Content visible immediately!</text>
+
+  <text x="465" y="255" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#8b949e">③ JS downloads, hydrates</text>
+  <text x="465" y="270" font-family="ui-monospace,monospace" font-size="11" fill="#e6edf3">   Makes page interactive</text>
+
+  <text x="465" y="295" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#7ee787">⏱ Content visible: ~0.5-1s</text>
+  <text x="465" y="315" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#7ee787">✅ Great SEO (full HTML)</text>
+  <text x="465" y="335" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#ff7b72">❌ Needs server (higher cost)</text>
+  <text x="465" y="355" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#ff7b72">❌ More complex ops</text>
+
+  <!-- Bottom -->
+  <text x="400" y="410" font-family="ui-sans-serif,sans-serif" font-size="14" fill="#bc8cff" text-anchor="middle">CSR = blank canvas shipped to user (they paint it)</text>
+  <text x="400" y="435" font-family="ui-sans-serif,sans-serif" font-size="14" fill="#bc8cff" text-anchor="middle">SSR = pre-painted canvas delivered (user just hangs it up)</text>
+  <text x="400" y="460" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#58a6ff" text-anchor="middle" font-style="italic">Content site → SSR/SSG. App behind login → CSR.</text>
+</svg>
