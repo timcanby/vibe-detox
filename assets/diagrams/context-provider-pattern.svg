@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <rect width="800" height="400" fill="#0d1117" rx="16"/>
+  <text x="400" y="35" font-family="ui-sans-serif,sans-serif" font-size="20" font-weight="bold" fill="#58a6ff" text-anchor="middle">Context Provider Pattern</text>
+
+  <!-- Without context (prop drilling) -->
+  <text x="200" y="70" font-family="ui-sans-serif,sans-serif" font-size="14" font-weight="bold" fill="#ff7b72" text-anchor="middle">Without Context (prop drilling)</text>
+  <rect x="120" y="85" width="160" height="35" fill="#161b22" stroke="#ff7b72" rx="5"/>
+  <text x="200" y="107" font-family="ui-monospace,monospace" font-size="11" fill="#ff7b72" text-anchor="middle">App user=...</text>
+  <line x1="200" y1="120" x2="200" y2="135" stroke="#30363d"/>
+  <rect x="120" y="135" width="160" height="35" fill="#161b22" stroke="#ff7b72" rx="5"/>
+  <text x="200" y="157" font-family="ui-monospace,monospace" font-size="11" fill="#ffa657" text-anchor="middle">Layout user=...</text>
+  <line x1="200" y1="170" x2="200" y2="185" stroke="#30363d"/>
+  <rect x="120" y="185" width="160" height="35" fill="#161b22" stroke="#ff7b72" rx="5"/>
+  <text x="200" y="207" font-family="ui-monospace,monospace" font-size="11" fill="#ffa657" text-anchor="middle">Header user=...</text>
+  <line x1="200" y1="220" x2="200" y2="235" stroke="#30363d"/>
+  <rect x="120" y="235" width="160" height="35" fill="#161b22" stroke="#7ee787" rx="5"/>
+  <text x="200" y="257" font-family="ui-monospace,monospace" font-size="11" fill="#7ee787" text-anchor="middle">Avatar uses user</text>
+  <text x="200" y="290" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#ff7b72" text-anchor="middle">Every layer passes the prop</text>
+
+  <!-- With context -->
+  <text x="600" y="70" font-family="ui-sans-serif,sans-serif" font-size="14" font-weight="bold" fill="#7ee787" text-anchor="middle">With Context</text>
+  <rect x="500" y="85" width="200" height="35" fill="#1c1e26" stroke="#7ee787" stroke-width="2" rx="5"/>
+  <text x="600" y="107" font-family="ui-monospace,monospace" font-size="11" fill="#7ee787" text-anchor="middle">ClerkProvider</text>
+  <line x1="540" y1="120" x2="540" y2="135" stroke="#30363d"/>
+  <line x1="660" y1="120" x2="660" y2="135" stroke="#30363d"/>
+  <rect x="500" y="135" width="90" height="35" fill="#161b22" stroke="#bc8cff" rx="5"/>
+  <text x="545" y="157" font-family="ui-monospace,monospace" font-size="10" fill="#bc8cff" text-anchor="middle">Layout</text>
+  <rect x="610" y="135" width="90" height="35" fill="#161b22" stroke="#bc8cff" rx="5"/>
+  <text x="655" y="157" font-family="ui-monospace,monospace" font-size="10" fill="#bc8cff" text-anchor="middle">Header</text>
+  <line x1="655" y1="170" x2="655" y2="235" stroke="#30363d" stroke-dasharray="3"/>
+  <rect x="610" y="235" width="90" height="35" fill="#161b22" stroke="#7ee787" stroke-width="2" rx="5"/>
+  <text x="655" y="257" font-family="ui-monospace,monospace" font-size="10" fill="#7ee787" text-anchor="middle">Avatar</text>
+  <text x="655" y="285" font-family="ui-monospace,monospace" font-size="9" fill="#7ee787" text-anchor="middle">useUser() reads</text>
+  <text x="655" y="297" font-family="ui-monospace,monospace" font-size="9" fill="#7ee787" text-anchor="middle">from context directly</text>
+  <text x="600" y="325" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#7ee787" text-anchor="middle">No props through middle layers!</text>
+
+  <!-- Bottom -->
+  <text x="400" y="365" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#8b949e" text-anchor="middle">Provider = radio tower. useContext = receiver. Any component tunes in.</text>
+  <text x="400" y="385" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#58a6ff" text-anchor="middle" font-style="italic">ClerkProvider wraps the app; any component reads auth state via useUser()</text>
+</svg>
