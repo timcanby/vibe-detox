@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <rect width="800" height="400" fill="#0d1117" rx="16"/>
+  <text x="400" y="35" font-family="ui-sans-serif,sans-serif" font-size="20" font-weight="bold" fill="#58a6ff" text-anchor="middle">Deploy & Destroy Workflows</text>
+
+  <!-- Deploy -->
+  <rect x="30" y="65" width="350" height="290" fill="#161b22" stroke="#7ee787" stroke-width="2" rx="10"/>
+  <text x="205" y="90" font-family="ui-sans-serif,sans-serif" font-size="14" font-weight="bold" fill="#7ee787" text-anchor="middle">deploy.yml (green button)</text>
+  <text x="205" y="110" font-family="ui-monospace,monospace" font-size="11" fill="#8b949e" text-anchor="middle">on: push to main</text>
+
+  <text x="45" y="140" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#bc8cff">1. checkout code</text>
+  <text x="45" y="158" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#f778ba">2. configure AWS (OIDC)</text>
+  <text x="45" y="176" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#ffa657">3. setup Python + Terraform + Node</text>
+  <text x="45" y="194" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#7ee787">4. package Lambda (zip)</text>
+  <text x="45" y="212" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#7ee787">5. build frontend (npm)</text>
+  <text x="45" y="230" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#58a6ff">6. terraform init (remote state)</text>
+  <text x="45" y="248" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#58a6ff">7. terraform workspace select</text>
+  <text x="45" y="266" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#58a6ff">8. terraform apply -auto-approve</text>
+
+  <text x="205" y="300" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#7ee787" text-anchor="middle">Automatic on every push to main</text>
+  <text x="205" y="320" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">Infrastructure updates with code changes</text>
+  <text x="205" y="345" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">Audit trail in GitHub Actions logs</text>
+
+  <!-- Destroy -->
+  <rect x="420" y="65" width="350" height="290" fill="#161b22" stroke="#ff7b72" stroke-width="2" rx="10"/>
+  <text x="595" y="90" font-family="ui-sans-serif,sans-serif" font-size="14" font-weight="bold" fill="#ff7b72" text-anchor="middle">destroy.yml (red button)</text>
+  <text x="595" y="110" font-family="ui-monospace,monospace" font-size="11" fill="#8b949e" text-anchor="middle">on: workflow_dispatch (manual)</text>
+
+  <text x="435" y="140" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#bc8cff">1. checkout code</text>
+  <text x="435" y="158" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#f778ba">2. configure AWS (OIDC)</text>
+  <text x="435" y="176" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#ffa657">3. setup Terraform</text>
+  <text x="435" y="194" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#58a6ff">4. terraform init (remote state)</text>
+  <text x="435" y="212" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#58a6ff">5. terraform workspace select</text>
+  <text x="435" y="230" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#ff7b72">6. terraform destroy -auto-approve</text>
+
+  <text x="435" y="265" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#8b949e">Input: environment (dev/test/prod)</text>
+  <text x="435" y="283" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#8b949e">Confirm: type environment name</text>
+
+  <text x="595" y="315" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#ff7b72" text-anchor="middle">Manual trigger ONLY</text>
+  <text x="595" y="335" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">Never automatic — irreversible</text>
+  <text x="595" y="350" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">Clean up environments to save $$</text>
+</svg>
