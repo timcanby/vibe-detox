@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <rect width="800" height="400" fill="#0d1117" rx="16"/>
+  <text x="400" y="35" font-family="ui-sans-serif,sans-serif" font-size="20" font-weight="bold" fill="#58a6ff" text-anchor="middle">Terraform Fundamentals</text>
+
+  <!-- .tf files -->
+  <rect x="30" y="65" width="160" height="180" fill="#161b22" stroke="#bc8cff" stroke-width="2" rx="8"/>
+  <text x="110" y="88" font-family="ui-sans-serif,sans-serif" font-size="12" font-weight="bold" fill="#bc8cff" text-anchor="middle">.tf files</text>
+  <text x="45" y="110" font-family="ui-monospace,monospace" font-size="10" fill="#e6edf3">versions.tf</text>
+  <text x="45" y="128" font-family="ui-monospace,monospace" font-size="10" fill="#e6edf3">variables.tf</text>
+  <text x="45" y="146" font-family="ui-monospace,monospace" font-size="10" fill="#e6edf3">main.tf</text>
+  <text x="45" y="164" font-family="ui-monospace,monospace" font-size="10" fill="#e6edf3">outputs.tf</text>
+  <text x="45" y="185" font-family="ui-sans-serif,sans-serif" font-size="9" fill="#8b949e">HCL declarative</text>
+  <text x="45" y="200" font-family="ui-sans-serif,sans-serif" font-size="9" fill="#8b949e">config merged</text>
+  <text x="45" y="215" font-family="ui-sans-serif,sans-serif" font-size="9" fill="#7ee787">committed to git</text>
+
+  <!-- Arrow -->
+  <line x1="195" y1="155" x2="245" y2="155" stroke="#30363d" stroke-width="2" marker-end="url(#tf)"/>
+  <defs><marker id="tf" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#30363d"/></marker></defs>
+
+  <!-- Terraform engine -->
+  <rect x="250" y="65" width="180" height="180" fill="#161b22" stroke="#58a6ff" stroke-width="2" rx="8"/>
+  <text x="340" y="88" font-family="ui-sans-serif,sans-serif" font-size="12" font-weight="bold" fill="#58a6ff" text-anchor="middle">Terraform</text>
+  <text x="340" y="110" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">1. Read .tf files</text>
+  <text x="340" y="128" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">2. Read state file</text>
+  <text x="340" y="146" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">3. Compute diff</text>
+  <text x="340" y="164" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#7ee787" text-anchor="middle">4. plan / apply</text>
+  <text x="340" y="185" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">5. API calls to AWS</text>
+  <text x="340" y="210" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#ffa657" text-anchor="middle">6. Update state</text>
+
+  <!-- Arrow -->
+  <line x1="435" y1="155" x2="485" y2="155" stroke="#30363d" stroke-width="2" marker-end="url(#tf)"/>
+
+  <!-- AWS -->
+  <rect x="490" y="65" width="160" height="180" fill="#161b22" stroke="#f778ba" stroke-width="2" rx="8"/>
+  <text x="570" y="88" font-family="ui-sans-serif,sans-serif" font-size="12" font-weight="bold" fill="#f778ba" text-anchor="middle">AWS</text>
+  <text x="505" y="112" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#e6edf3">S3 buckets</text>
+  <text x="505" y="130" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#e6edf3">Lambda functions</text>
+  <text x="505" y="148" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#e6edf3">API Gateway</text>
+  <text x="505" y="166" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#e6edf3">CloudFront</text>
+  <text x="505" y="184" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#e6edf3">IAM roles</text>
+  <text x="570" y="215" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">(or GCP / Azure)</text>
+
+  <!-- State -->
+  <rect x="690" y="100" width="90" height="80" fill="#1c1e26" stroke="#ffa657" stroke-width="2" rx="6"/>
+  <text x="735" y="125" font-family="ui-sans-serif,sans-serif" font-size="11" font-weight="bold" fill="#ffa657" text-anchor="middle">State</text>
+  <text x="735" y="145" font-family="ui-monospace,monospace" font-size="9" fill="#8b949e" text-anchor="middle">.tfstate</text>
+  <text x="735" y="162" font-family="ui-sans-serif,sans-serif" font-size="9" fill="#ff7b72" text-anchor="middle">NOT in git</text>
+  <line x1="670" y1="155" x2="690" y2="140" stroke="#ffa657" stroke-width="1" stroke-dasharray="3"/>
+
+  <!-- Three core terms -->
+  <rect x="100" y="280" width="600" height="90" fill="#1c1e26" stroke="#7ee787" stroke-width="1" rx="8"/>
+  <text x="400" y="305" font-family="ui-sans-serif,sans-serif" font-size="14" font-weight="bold" fill="#7ee787" text-anchor="middle">The Three Core Terms</text>
+  <text x="150" y="330" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#bc8cff">Provider = cloud vendor (AWS)</text>
+  <text x="150" y="350" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#f778ba">Variable = input parameter (model_id)</text>
+  <text x="450" y="330" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#7ee787">Resource = building block (S3 bucket)</text>
+  <text x="450" y="350" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#8b949e">Output = result after deploy (URL)</text>
+</svg>
