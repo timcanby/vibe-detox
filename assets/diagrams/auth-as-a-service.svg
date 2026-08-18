@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <rect width="800" height="400" fill="#0d1117" rx="16"/>
+  <text x="400" y="35" font-family="ui-s-serif,sans-serif" font-size="20" font-weight="bold" fill="#58a6ff" text-anchor="middle">Auth-as-a-Service</text>
+
+  <!-- Your App -->
+  <rect x="30" y="70" width="180" height="200" fill="#161b22" stroke="#bc8cff" stroke-width="2" rx="10"/>
+  <text x="120" y="95" font-family="ui-sans-serif,sans-serif" font-size="14" font-weight="bold" fill="#bc8cff" text-anchor="middle">Your App</text>
+  <text x="120" y="115" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">(Next.js + FastAPI)</text>
+  <text x="45" y="145" font-family="ui-monospace,monospace" font-size="10" fill="#e6edf3">&lt;SignInButton/&gt;</text>
+  <text x="45" y="163" font-family="ui-monospace,monospace" font-size="10" fill="#e6edf3">&lt;ClerkProvider&gt;</text>
+  <text x="45" y="181" font-family="ui-monospace,monospace" font-size="10" fill="#e6edf3">fetch + token</text>
+  <text x="45" y="210" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#7ee787" text-anchor="start">SDK calls</text>
+
+  <!-- Auth Provider -->
+  <rect x="590" y="70" width="180" height="200" fill="#161b22" stroke="#f778ba" stroke-width="2" rx="10"/>
+  <text x="680" y="95" font-family="ui-sans-serif,sans-serif" font-size="14" font-weight="bold" fill="#f778ba" text-anchor="middle">Clerk</text>
+  <text x="680" y="115" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">Auth provider</text>
+  <text x="680" y="145" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#e6edf3" text-anchor="middle">User accounts</text>
+  <text x="680" y="163" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#e6edf3" text-anchor="middle">OAuth flows</text>
+  <text x="680" y="181" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#e6edf3" text-anchor="middle">Token issuance</text>
+  <text x="680" y="210" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#7ee787" text-anchor="middle">JWKS validation</text>
+
+  <!-- Arrows -->
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#30363d"/></marker></defs>
+  <line x1="210" y1="170" x2="590" y2="170" stroke="#30363d" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Problem -->
+  <text x="400" y="200" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#ff7b72" text-anchor="middle">⚠ Token issued but not reaching backend</text>
+
+  <!-- Before/After -->
+  <rect x="50" y="290" width="320" height="80" fill="#1c1e26" stroke="#ff7b72" stroke-width="1" rx="8"/>
+  <text x="210" y="315" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#ff7b72" text-anchor="middle">Before: build auth yourself</text>
+  <text x="210" y="335" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">Sign-in, OAuth, MFA, sessions,</text>
+  <text x="210" y="352" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">password reset = weeks of work</text>
+
+  <rect x="430" y="290" width="320" height="80" fill="#1c1e26" stroke="#7ee787" stroke-width="1" rx="8"/>
+  <text x="590" y="315" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#7ee787" text-anchor="middle">After: auth-as-a-service</text>
+  <text x="590" y="335" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">Drop in SDK, get sign-in + OAuth + MFA</text>
+  <text x="590" y="352" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">in an afternoon</text>
+</svg>
