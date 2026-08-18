@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+  <rect width="800" height="420" fill="#0d1117" rx="16"/>
+  <text x="400" y="35" font-family="ui-sans-serif,sans-serif" font-size="20" font-weight="bold" fill="#58a6ff" text-anchor="middle">OIDC: GitHub Actions to AWS (No Static Keys)</text>
+
+  <!-- Static keys (bad) -->
+  <rect x="50" y="65" width="320" height="130" fill="#161b22" stroke="#ff7b72" stroke-width="2" rx="10"/>
+  <text x="210" y="90" font-family="ui-sans-serif,sans-serif" font-size="14" font-weight="bold" fill="#ff7b72" text-anchor="middle">Static Keys (old way)</text>
+  <text x="65" y="115" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#e6edf3">AWS_ACCESS_KEY_ID = AKIAxxx</text>
+  <text x="65" y="133" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#e6edf3">AWS_SECRET_ACCESS_KEY = xxx</text>
+  <text x="65" y="158" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#ff7b72">Never expire (leak = forever)</text>
+  <text x="65" y="175" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#ff7b72">Stored in GitHub secrets</text>
+
+  <!-- OIDC (good) -->
+  <rect x="430" y="65" width="320" height="130" fill="#161b22" stroke="#7ee787" stroke-width="2" rx="10"/>
+  <text x="590" y="90" font-family="ui-sans-serif,sans-serif" font-size="14" font-weight="bold" fill="#7ee787" text-anchor="middle">OIDC (modern way)</text>
+  <text x="445" y="115" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#e6edf3">GitHub generates JWT token</text>
+  <text x="445" y="133" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#e6edf3">AWS exchanges for temp creds</text>
+  <text x="445" y="158" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#7ee787">Expires in ~1 hour</text>
+  <text x="445" y="175" font-family="ui-sans-serif,sans-serif" font-size="11" fill="#7ee787">No secrets to leak</text>
+
+  <!-- Flow -->
+  <rect x="100" y="220" width="600" height="170" fill="#1c1e26" stroke="#58a6ff" stroke-width="1" rx="8"/>
+  <text x="400" y="245" font-family="ui-sans-serif,sans-serif" font-size="14" font-weight="bold" fill="#58a6ff" text-anchor="middle">OIDC Flow</text>
+
+  <text x="130" y="275" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#bc8cff">1. Workflow starts (push to main)</text>
+  <text x="130" y="295" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#f778ba">2. GitHub generates OIDC JWT: "I am repo X, branch main"</text>
+  <text x="130" y="315" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#ffa657">3. Workflow sends JWT to AWS STS</text>
+  <text x="130" y="335" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#7ee787">4. AWS checks trust policy: repo matches? branch matches?</text>
+  <text x="130" y="355" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#58a6ff">5. AWS issues temp credentials (1hr expiry)</text>
+  <text x="130" y="375" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#8b949e">6. Workflow deploys. Credentials expire automatically.</text>
+
+  <text x="400" y="405" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#58a6ff" text-anchor="middle" font-style="italic">Valet key: temporary, scoped, no copy of your house key</text>
+</svg>
