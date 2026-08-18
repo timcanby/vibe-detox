@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="380" viewBox="0 0 800 380">
+  <rect width="800" height="380" fill="#0d1117" rx="16"/>
+  <text x="400" y="35" font-family="ui-sans-serif,sans-serif" font-size="20" font-weight="bold" fill="#58a6ff" text-anchor="middle">Terraform Workspaces — One Config, Many Worlds</text>
+
+  <!-- Shared config -->
+  <rect x="280" y="60" width="240" height="50" fill="#1c1e26" stroke="#7ee787" stroke-width="2" rx="8"/>
+  <text x="400" y="92" font-family="ui-monospace,monospace" font-size="13" fill="#7ee787" text-anchor="middle">main.tf (shared config)</text>
+
+  <!-- Lines down to 3 workspaces -->
+  <line x1="350" y1="110" x2="150" y2="145" stroke="#30363d" stroke-width="2"/>
+  <line x1="400" y1="110" x2="400" y2="145" stroke="#30363d" stroke-width="2"/>
+  <line x1="450" y1="110" x2="650" y2="145" stroke="#30363d" stroke-width="2"/>
+
+  <!-- Dev workspace -->
+  <rect x="50" y="145" width="200" height="160" fill="#161b22" stroke="#bc8cff" stroke-width="2" rx="8"/>
+  <text x="150" y="170" font-family="ui-sans-serif,sans-serif" font-size="13" font-weight="bold" fill="#bc8cff" text-anchor="middle">dev workspace</text>
+  <text x="65" y="195" font-family="ui-monospace,monospace" font-size="10" fill="#e6edf3">state: dev.tfstate</text>
+  <text x="65" y="215" font-family="ui-monospace,monospace" font-size="10" fill="#7ee787">bucket: twin-dev-mem</text>
+  <text x="65" y="233" font-family="ui-monospace,monospace" font-size="10" fill="#7ee787">lambda: twin-dev-api</text>
+  <text x="65" y="253" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#8b949e">instance: t3.micro</text>
+  <text x="65" y="280" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#bc8cff" text-anchor="start">terraform destroy ✓</text>
+
+  <!-- Test workspace -->
+  <rect x="300" y="145" width="200" height="160" fill="#161b22" stroke="#ffa657" stroke-width="2" rx="8"/>
+  <text x="400" y="170" font-family="ui-sans-serif,sans-serif" font-size="13" font-weight="bold" fill="#ffa657" text-anchor="middle">test workspace</text>
+  <text x="315" y="195" font-family="ui-monospace,monospace" font-size="10" fill="#e6edf3">state: test.tfstate</text>
+  <text x="315" y="215" font-family="ui-monospace,monospace" font-size="10" fill="#7ee787">bucket: twin-test-mem</text>
+  <text x="315" y="233" font-family="ui-monospace,monospace" font-size="10" fill="#7ee787">lambda: twin-test-api</text>
+  <text x="315" y="253" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#8b949e">instance: t3.small</text>
+  <text x="315" y="280" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#ffa657" text-anchor="start">isolated from dev</text>
+
+  <!-- Prod workspace -->
+  <rect x="550" y="145" width="200" height="160" fill="#161b22" stroke="#f778ba" stroke-width="2" rx="8"/>
+  <text x="650" y="170" font-family="ui-sans-serif,sans-serif" font-size="13" font-weight="bold" fill="#f778ba" text-anchor="middle">prod workspace</text>
+  <text x="565" y="195" font-family="ui-monospace,monospace" font-size="10" fill="#e6edf3">state: prod.tfstate</text>
+  <text x="565" y="215" font-family="ui-monospace,monospace" font-size="10" fill="#7ee787">bucket: twin-prod-mem</text>
+  <text x="565" y="233" font-family="ui-monospace,monospace" font-size="10" fill="#7ee787">lambda: twin-prod-api</text>
+  <text x="565" y="253" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#8b949e">instance: t3.large</text>
+  <text x="565" y="280" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#ff7b72" text-anchor="start">NEVER destroy!</text>
+
+  <!-- Bottom -->
+  <text x="400" y="335" font-family="ui-sans-serif,sans-serif" font-size="13" fill="#8b949e" text-anchor="middle">Same .tf files → different state → different resources per workspace</text>
+  <text x="400" y="358" font-family="ui-sans-serif,sans-serif" font-size="12" fill="#58a6ff" text-anchor="middle" font-style="italic">Like parallel universes: same laws, different reality</text>
+</svg>
